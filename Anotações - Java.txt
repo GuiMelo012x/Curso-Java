@@ -1,0 +1,83 @@
+String nome = sc.nextLine(); 
+	Recebe uma String no teclado.
+	Seleciona todas as linhas, CTRL + / = comenta todas as linhas
+
+num = (valor > 0) ? valor : 7; 
+	Se o valor for menor que zero, ele vira 7. Se for maior que zero, continua o mesmo.
+	O "?" seria o else.
+	
+For Each
+	String universidade = "Universidade";
+		// para cada um dos caracteres da string, imprime a letra.
+        for (char letra : universidade.toCharArray()) {
+            System.out.println(letra);
+        }
+
+Tipos de Dados em Java
+	Tipos de Dados Numéricos
+		Tipos primários/Primitivos
+			int num1 = 51;
+			short num2 = 12; --> ocupa menos espaço que o int.
+			long num3 = 512123;
+			byte num4 = 5; --> Inteiro
+			char num5 = 35;
+
+		Tipos não primários/ Não primitivos
+			Integer e Short são classes.
+			Integer num6 = 12;
+			Short num7 = (short) 156; --> cast
+			
+
+		double preco = 0.3463; --> se o valor for muito extenso, é melhor trabalhar com double.
+		float preco2 = 0.2984f; --> ocupa menos espaço que o double.
+		
+		Float preco3 = 0.70f;
+		Double preco4 = 0.74;
+		
+		System.out.println(Integer.SIZE) --> para saber quanto uma variável ocupa.
+		System.out.println(Integer.MAX_VALUE) --> para saber o valor máximo do Integer (também funciona com Short e outros).
+		System.out.println(Integer.MIN_VALUE) --> para saber o valor mínimo do Integer (também funciona com Short e outros).
+
+			
+		long/Long --> 64 bits.
+		int/Integer --> 32 bits.
+		short/Short --> 16 bits.
+		char/Character --> 16 bits.
+		byte/Byte --> 8 bits.
+		
+	Tipos de Dados Alfanuméricos
+		char letra = 'a';
+			o char serve tanto para número quanto para letra.
+			
+		String nome = "Git"
+	
+	Tipos Booleanos
+		Tipos primitivos
+			boolean verdadeiro = true;
+			boolean falso = false;
+			
+		Tipos não primitivos
+			Boolean V = true;
+			Boolean F = false;
+		
+		 
+Vetores
+	int numeros[];
+		declarando o vetor.
+	
+	int numeros [] = new int [5];
+		declarando e especificando o tamanho do vetor.
+	
+	int numeros[] = {0,1,2,3,4};
+		declarando, especificando e inicializando o vetor.
+		
+	String nomes[] = new String[4]
+	String frutas[] = {"Uva", "Melancia", "Banana"}
+	
+	Os vetores possuem o tamanho de [n-1], ou seja, o [10] tem 9 indexes.
+	Os vetores possuem tamanho fixo e não podem ser aumentados/diminuídos.
+	Os vetores possuem tipos de dados fixos e não podem ser alterados.
+
+	  for (int i:numeros) {
+		System.out.println(i);
+	} --> forma de imprimir todo o vetor, mas não há condição de parada.
