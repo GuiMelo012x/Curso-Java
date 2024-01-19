@@ -1,4 +1,4 @@
-public class aula33 {
+public class vetores {
     public static void main(String[] args) {
         System.out.println("----- Aula 33 -----");
         // A33 - Vetores
