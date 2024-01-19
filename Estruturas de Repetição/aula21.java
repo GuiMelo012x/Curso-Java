@@ -35,5 +35,6 @@ public class aula21 {
             System.out.println(nome + " tem " + idade + " anos.");
 
         } while (idade >0);
+    sc.close();
     }
 }
