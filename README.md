@@ -10,4 +10,4 @@ Java course i'm taking in Udemy: Java programming, from basic to advanced, from 
 
 Although i already know Java and have been using it for over a year, i believe that i can be better and improve in some areas. Besides, i am taking this course to be a better student, because Java is the only programming language we use at my university. 
 
-As i am already familiar with java, my focus will be on the more advanced part of the course.
+As i am already familiar with Java, my focus will be on the more advanced part of the course.
