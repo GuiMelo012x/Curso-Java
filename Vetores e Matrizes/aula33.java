@@ -18,6 +18,6 @@ public class aula33 {
 
         for (int i:numeros) {
             System.out.println(i);
-        }
+        } // Outra forma de imprimir os vetores, porém não há condição de parada.
     }
 }
