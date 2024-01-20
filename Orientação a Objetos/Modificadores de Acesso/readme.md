@@ -1,5 +1,5 @@
 # Modificadores de Acesso - Aula 52 - 57
-Seção do curso que cobre principalmente sobre Encapsulamento e modificadores de acesso public, private e protected.
+Seção do curso que cobre principalmente sobre encapsulamento e modificadores de acesso public, private e protected.
 A partir desta seção, serão utilizados pacotes.
 
 -------
