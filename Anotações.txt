@@ -108,3 +108,15 @@ Matrizes
             for (int j = 0; j < numeros[i].length; j++) { //numeros[i].length pois ele vê a qtd de itens que tem na linha
                 System.out.println("numeros[" + i + "]" + "[" + j + "] = " + numeros[i][j] );
             } --> imprimindo a matriz
+Funções
+	Devem possuir:
+		a) Tipo de retorno (tipo de dado que a função vai retornar).
+		b) Nome - a ação que a função realiza.
+		c) Parâmetros/Argumentos de entrada (opcional)
+		d) Retorno (opcional - depende do tipo de retorno)
+		
+	void = vazio
+	
+    static void imprimir (int qtdFrutas){ --> sem return.
+	static int multiplicação (int v1,int v2){
+	static String mensagem(){
