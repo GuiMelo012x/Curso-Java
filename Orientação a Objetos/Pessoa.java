@@ -13,7 +13,7 @@ public class Pessoa {
     public Pessoa(){
 
     }
-
+    
     void imprimir_informacoes (){
         System.out.println(this.nome + " " + this.cidade + " " + this.ano_nascimento + " " + " " + this.idade + " - Método em Pessoa");
     }
