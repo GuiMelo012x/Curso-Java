@@ -120,3 +120,81 @@ Funções
     static void imprimir (int qtdFrutas){ --> sem return.
 	static int multiplicação (int v1,int v2){
 	static String mensagem(){
+
+
+Orientação a Objetos
+	Produto - Classe
+		nome - objeto/atributos
+		preco - objeto/atributos
+		desconto - objeto/atributos
+		AumentarPreco() - método
+			O método é específico de uma classe.
+	
+	Classes
+		Classes se iniciam com letra maiúscula.
+		Não há main nas classes.
+		Toda classe java se escreve:
+			public class Nome{
+			}
+		O nome da classe java deve ser o mesmo nome do arquivo java.
+			Produto.java
+	
+	Atributos
+		Os atributos são as características das classes.
+			public class Produto {
+				String nome;
+				String acucar;
+				float preco,desconto;
+			}
+		Podemos entender atributos como "variáveis" da classe.
+		Uma outra forma de nomenclatura para os atributos são "estados".
+		Atributos são nomeados em letras minúsculas, sem espaço, acentuação ou caracteres especiais.
+		
+	Métodos
+		São ações que são realizadas por um objeto da classe.
+			void aumentar_preco(){ --> Método para aumentar o preço em 10 reais.
+				this.preco = this.preco + 10;
+			} 
+		São comportamentos dos objetos das classes.
+		Mesmos requisitos das funções, pedindo nome, parâmetro e retorno (a não ser que seja void).
+			void aumentar_preco(float valor){ -->  ele recebe um parâmetro (valor) e aumenta de acordo com o que foi recebido
+				this.preco = this.preco + valor;
+			}
+			Como é void, não retorna nada, apenas executa um comando, que seria alterar o valor do preço.
+
+	Objetos
+		São produtos/instâncias da classe.
+			Produto p1 = new Produto(); // Declaração e Instanciação do Objeto.
+			        // p1 -> instância do objeto
+			p1.nome = "Nome do produto";
+			p1.preco = "preço"f; --> em float
+			p1.desconto = "valor"f; --> em float
+		
+		Outra forma de instanciar e inicializar:	
+			Produto p0;
+			p0 = new Produto();
+			p0.nome = "nome";
+			p0.preco = preco;
+			p0.desconto = desconto;
+	
+	Construtor
+		O construtor da calsse sempre tem o mesmo nome da classe.
+		Podemos ter mais de um construtor na classe.
+		Existem duas formas de declarar o construtor, com e sem parâmetros: 
+	
+			Public Pessoa(){ --> construtor sem parâmetros 	
+			}
+				Pessoa pessoa1 = new Pessoa(); // Construtor sem parâmetros
+				pessoa1.nome = "Jula";
+				pessoa1.cidade = "Itapecerica";
+				pessoa1.ano_nascimento = 2005;
+				pessoa1.idade = 18;
+		
+			public Pessoa(String nome, String cidade, int ano_nascimento, int idade){ ---> Construtor com parâmetros
+				this.nome = nome;
+				this.cidade = cidade;
+				this.ano_nascimento = ano_nascimento;
+				this.idade = idade;
+			}
+				Pessoa pessoa2 = new Pessoa("Guilherme","Recife",2001,22); ---> Com parâmetros
+
