@@ -123,7 +123,7 @@ Funções
 
 
 Orientação a Objetos
-	Produto - Classe
+	orientacao_inicio.Produto - Classe
 		nome - objeto/atributos
 		preco - objeto/atributos
 		desconto - objeto/atributos
@@ -137,11 +137,11 @@ Orientação a Objetos
 			public class Nome{
 			}
 		O nome da classe java deve ser o mesmo nome do arquivo java.
-			Produto.java
+			orientacao_inicio.Produto.java
 	
 	Atributos
 		Os atributos são as características das classes.
-			public class Produto {
+			public class orientacao_inicio.Produto {
 				String nome;
 				String acucar;
 				float preco,desconto;
@@ -164,15 +164,15 @@ Orientação a Objetos
 
 	Objetos
 		São produtos/instâncias da classe.
-			Produto p1 = new Produto(); // Declaração e Instanciação do Objeto.
+			orientacao_inicio.Produto p1 = new orientacao_inicio.Produto(); // Declaração e Instanciação do Objeto.
 			        // p1 -> instância do objeto
 			p1.nome = "Nome do produto";
 			p1.preco = "preço"f; --> em float
 			p1.desconto = "valor"f; --> em float
 		
 		Outra forma de instanciar e inicializar:	
-			Produto p0;
-			p0 = new Produto();
+			orientacao_inicio.Produto p0;
+			p0 = new orientacao_inicio.Produto();
 			p0.nome = "nome";
 			p0.preco = preco;
 			p0.desconto = desconto;
@@ -182,19 +182,46 @@ Orientação a Objetos
 		Podemos ter mais de um construtor na classe.
 		Existem duas formas de declarar o construtor, com e sem parâmetros: 
 	
-			Public Pessoa(){ --> construtor sem parâmetros 	
+			Public orientacao_inicio.Pessoa(){ --> construtor sem parâmetros
 			}
-				Pessoa pessoa1 = new Pessoa(); // Construtor sem parâmetros
+				orientacao_inicio.Pessoa pessoa1 = new orientacao_inicio.Pessoa(); // Construtor sem parâmetros
 				pessoa1.nome = "Jula";
 				pessoa1.cidade = "Itapecerica";
 				pessoa1.ano_nascimento = 2005;
 				pessoa1.idade = 18;
 		
-			public Pessoa(String nome, String cidade, int ano_nascimento, int idade){ ---> Construtor com parâmetros
+			public orientacao_inicio.Pessoa(String nome, String cidade, int ano_nascimento, int idade){ ---> Construtor com parâmetros
 				this.nome = nome;
 				this.cidade = cidade;
 				this.ano_nascimento = ano_nascimento;
 				this.idade = idade;
 			}
-				Pessoa pessoa2 = new Pessoa("Guilherme","Recife",2001,22); ---> Com parâmetros
+				orientacao_inicio.Pessoa pessoa2 = new orientacao_inicio.Pessoa("Guilherme","Recife",2001,22); ---> Com parâmetros
 
+Packages
+	Pacotes servem para organizar o código fonte do projeto.
+	Indicam onde determinado arquivo do projeto se encontra.
+	Os nomes de pacotes devem ser em letras minúsculas,sem espaço, acentuação ou caracteres especiais.
+	Por convenção, é utilizado nos nomes de pacotes, o domínio da empresa criadora do projeto, ao contrário, sendo a última 
+	parte do nome o especificador do pacote.
+		Ex: package br.com.geekuniversity;
+	
+Encapsulamento
+	Proibir o acesso aos atributos diretamente.
+	Dessa forma, é necessário criar os getters e setters.
+		São métodos públicos, que servem para consultar dados.
+	Public
+		Modificador de acesso que torna o objeto público, ou seja, é acessado em qualquer lugar do projeto.
+		
+	Private
+		Modificador de acesso que torna o objeto privado, ou seja, só pode ser acessado na classe em que é declarado.
+		Para poder ler e alterar o objeto privado fora da classe, deve-se criar os getters e setters.
+		joao.saldo = 30 --> não pode
+		joao.setSaldo(30) --> pode
+		print(joao.saldo) --> não pode
+		print (joao.getSaldo()) --> pode
+		
+	Protected
+		Será o modificador de acesso padrão, caso não seja especificado se é public ou private
+		Faz com que o elemento seja visivel apenas dentro do mesmo pacote onde o elemento foi declarado.
+		
