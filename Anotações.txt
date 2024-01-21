@@ -225,3 +225,86 @@ Encapsulamento
 		Será o modificador de acesso padrão, caso não seja especificado se é public ou private
 		Faz com que o elemento seja visivel apenas dentro do mesmo pacote onde o elemento foi declarado.
 		
+Herança
+	Evita a repetição de código, e facilita a manutenção do programa.
+	Quando uma classe herda de outra classe, ela ganha todos os atributos e métodos da classe herdada.
+	A Classe que herda é chamada de classe mãe/pai/superclasse/base.
+	A Classe que vai herdar é chamada de classe filha, ou subclasse.
+	public class Aluno extends Pessoa{
+		private String ra;
+	 public Aluno(String nome, int idade,String ra, String email) {
+        super(nome,idade, email);  // Pessoa (nome,idade);
+        this.ra = ra;
+    }
+	
+	
+Polimorfismo 
+	Polimorfismo significa muitas formas, ou seja, objetos do mesmo tipo podem agir de formas diferentes.
+	O toString por exemplo, se colocado em Pessoa e em Professor, imprime apenas o que tem em pessoa.
+	Tem como colocar o toString tanto em Prof quanto em Aluno quanto em Pessoa, e cada um age de uma forma diferente.
+		
+		public String toString() { --> Classe Professor
+			return super.toString() + "\n Matrícula: " + this.matricula;
+		
+		public String toString() { --> Classe Aluno
+			return super.toString() + "\n R.A:" + this.ra;
+		
+		   
+		public String toString() { --> Classe Pessoa
+			return "nome = " + nome + ", idade = " + idade + ", email = " + email + " - Método ToString";
+	
+	Também é possível alterar o método "getNome" para que ele imprima exatamente o que você quer.
+	
+		public String getNome(){ --> Classe Professor
+			return "Professor: " + super.getNome() + " - Método getNome em Professor";
+		
+		public String getNome(){ --> Classe Aluno
+			return "Aluno: " + super.getNome() + " - Método getNome em Aluno";
+		
+		public String getNome() { --> Classe Pessoa
+			return nome;
+    
+Sobrecarga de Método/Overloading
+	Quando sobrescrevemos um método na mesma classe de declaração
+
+		
+		public void mensagem(){
+			System.out.println("Bom dia");
+
+		public void mensagem(String msg){
+			System.out.println(msg); 
+			
+		p1.mensagem(); --> Printa "Bom dia"
+        p1.mensagem("Olá"); --> Printa "Olá!"
+	
+	Ambos funcionam, pois o primeiro printaria uma mensagem padrão, que seria "Bom dia", caso não houvesse nenhum parâmetro declarado.
+	Caso seja declarado o parâmetro, ele iria imprimir a mensagem que está no parênteses.
+	No entanto, dois métodos iguais não podem existir, isto é, se existe um método mensagem que não recebe parâmetros, não pode existir
+	outro método "mensagem" que também não recebe parâmetros. No entanto, se ele receber algum, está ok.	
+			public void mensagem(){
+				System.out.println("Bom dia");
+			
+			public void mensagem(){ --> não pode existir, dá erro.
+				System.out.println("Boa tarde");
+			
+			public void mensagem(String msg){ --> pode existir
+				System.out.println(msg);
+			
+			public void mensagem(String msg, int i){ --> pode existir
+				System.out.println(msg + i);
+
+Sobrescrita de Método/Override
+	Quando sobrescrevemos métodos da classe pai (super) em classes filhas.
+		Quando sobrescrevemos métodos da classe Pessoa na classe Alunos, por exemplo.
+		Fizemos isso no método toString em "Alunos"
+		
+			@Override
+			public String toString() {
+				return super.toString() + " | R.A:" + this.ra + " - Método ToString (Aluno)";
+			
+			@Override
+			public String toString() {
+				return "nome = " + nome + ", idade = " + idade + ", email = " + email; - toString em Pessoa
+ 
+
+	
