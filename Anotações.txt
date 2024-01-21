@@ -224,7 +224,9 @@ Encapsulamento
 	Protected
 		Será o modificador de acesso padrão, caso não seja especificado se é public ou private
 		Faz com que o elemento seja visivel apenas dentro do mesmo pacote onde o elemento foi declarado.
-		
+	Final
+		Modificador de acesso que faz com que o elemento que esteja utilizando-o, não possa ser extendido ou reescrito.
+
 Herança
 	Evita a repetição de código, e facilita a manutenção do programa.
 	Quando uma classe herda de outra classe, ela ganha todos os atributos e métodos da classe herdada.
@@ -307,4 +309,65 @@ Sobrescrita de Método/Override
 				return "nome = " + nome + ", idade = " + idade + ", email = " + email; - toString em Pessoa
  
 
+Classes Abstratas
+	Recurso que proporciona um bloqueio na criação de objetos.
+	Após mudar uma classe para abstrata, não é mais possível instanciar nem mexer no objeto.
+	Impossibilita a criação de objetos da classe abstrata.
+	Uma classe abstrata pode ter atributos, métodos e métodos abstratos.
+		Métodos abstratos são métodos que não possuem implementação, possuem apenas declaração.
+		Obrigatoriamente, as classes que herdarem desta classe com método abstrato, precisa implementar estes métodos.
+			Se em Pessoa tem o método "dizerOi()", Aluno e Professor também deve conter o método "dizerOi"
+	    public abstract void mensagens(String texto); //Declaração de um método abstrato
+
+Template Method
+	Define o esqueleto de um algoritmo dentro de um método, transferindo alguns de seus passos para as subclasses.
+	Permite que as subclasses redefinam certos passos de um algoritmo sem alterar a sua estrutura.
+		public final metodo_principal(){ --> Como ele é final, este método vai se manter desta forma para sempre.
+			passo1()
+			passo2()
+			passo3()
+		}
+
+Interfaces
+	São conhecidas como "contratos".
+	Por exemplo:
+		Se uma empresa criou um contrato com regras para definir a criação de um produto.
+			O João e a Maria decidiram criar um produto cada um baseado neste contrato.
+			Como ambos estão usando as mesmas regras, os produtos serão equivalentes.
+		Ex:
+			Regras do contrato para confecção de um bolo:
+				- Deve ser de chocolate, com cobertura e recheado.
+		Quem implementar este contrato, querendo ou não, devem, obrigatoriamente, seguir as regras e 
+		fazer um bolo de chocolate com cobertura e recheado.
+		No entanto, João pode muito bem fazer uma cobertura de doce de leite, enquanto a Maria de morango.
 	
+	Para criar um interface, é recomendado criar com um "I" na frente do nome da classe
+		Ex: IEletronico
+	Uma interface pode conter:
+		Constantes
+		Métodos Abstratos
+	Não é permitido haver métodos concretos ou implementados.
+	No programa, é feito uma Interface que serve de contrato para produtos eletrônicos.
+		Todo produto eletrônico que implementar esta interface, obrigatoriamente deverão implementar os métodos abstratos.
+		
+	Para implementar a classe Interface:
+		public class Ventilador implements IEletronico{
+	Os métodos podem ser implementados e utilizados da forma que quiser.
+		Um ventilador, por exemplo, pode executar o ligar de uma forma, e o ar-condicionado, de outra.
+			
+		public interface IEletronico {
+		public String MARCA = "Geek"; --> Desta forma, todos os elementos que herdarem desta classe terão a mesma marca,"Geek".
+		public void ligar(); 
+		public void desligar(); --> Todos os métodos deverão implementar o ligar e desligar.
+
+Atributos Estáticos
+	São atributos onde os valores são compartilhados entre as instâncias da classe.
+		No programa, c1,c2 e c3 são uma instância da classe Conta, e compartilham o número pelo atributo "contador"
+	Para usar a forma estática, deve ser utilizado o "Conta.contador" ao invés de "this.contador"
+		Conta.contador = Conta.contador + 1;  
+		Conta.contador = 40; --> Alterando o atributo na main, valendo para todas as instâncias vindo a partir da mudança.
+
+Métodos Estáticos
+	Um método estático não depende de uma instância da classe para ser utilizado, pode-se utilizar conforme:
+		NomeDaClasse.Metodo
+		System.out.println("A próxima conta será: " + Conta.proximaConta()); --> Método estático, não depende de uma instância.
