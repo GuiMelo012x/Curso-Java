@@ -455,3 +455,30 @@ Throws
 			}catch (Exception e) {
 				System.out.println("Não foi possível dividir.");
 			}
+			
+Gerando Executáveis JAR
+	JAR - Java Archive - arquivo compactado java
+	1) File -> Project Structure -> Project Settings -> Artifacts -> Clique no "+" -> Jar -> From modules with dependencies... > selecione qual é a classe Main > OK
+	2) Configurado o artefato vá em Build > Build Artifact > Build
+	o JAR será gerado no diretório definido no passo 1
+	
+Javadoc
+	Forma de adicionar uma descrição nos métodos quando o usuário põe o mouse em cima.
+
+	/**
+     * Método que retorna o saldo
+     * @return
+     */
+    public float getSaldo() {
+        return saldo;
+    }
+	
+	/**
+     * Método para realizar depósito
+     * @param valor a ser depositado
+     */
+    public void sacar(float valor) {
+        if (valor > this.saldo) {
+            System.out.println("Saldo insuficiente." + " Saldo: R$" + this.saldo);
+
+JavaLang
