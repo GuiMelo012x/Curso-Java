@@ -481,4 +481,47 @@ Javadoc
         if (valor > this.saldo) {
             System.out.println("Saldo insuficiente." + " Saldo: R$" + this.saldo);
 
-JavaLang
+JavaLang:
+
+	Classe Object
+		A mãe de todas as classes
+		Toda classe java tem um "extends Object" por padrão
+		A classe Object faz parte do pacote java.lang
+		Para comparar se um objeto é igual ao outro:
+		if(c1.equals(c2)) --> verifica se c1 é igual a c2.
+		instanceof
+			verifica se um objeto é instância de uma Classe.
+				if (!(obj instanceof Conta)){
+					return false;
+
+	Biblioteca Math
+		Possui vários métodos e constantes estáticas para serem utilizados nos programas.
+		Ex:
+			Math.PI - valor de PI
+			Math.E - valor da constante de Euler
+			Math.round(x) - arredonda o número para baixo e retorna um inteiro
+			Math.floor(x) - arredonda o número para baixo e retorna um double.
+			Math.ceil(x) - arredonda o número para cima e retorna um double.
+			Math.sin(x) - calcula o seno de x
+			Math.cos(x) - calcula o cosseno de x
+			Math.tan(x) - calcula a  tangente de x
+			Math.pow(x,y) - faz x^y e calcula, retornando um double.
+				para arredondar, só fazer Math.round(Math.pow(x,y));
+			Math.sqrt(x) - calcula a raiz quadrada em double. Para arredondar só fazer o passo acima.
+			Entre outros.
+	
+	Trabalhando com Strings
+		Em java, strings são imutáveis, ou seja, não mudam.
+		
+		mensagem.replace(palavra1,palavra2) - altera na string, se encontrar, a primeira palavra pela segunda.
+		mensagem = mensagem.toLowerCase() - converte as letras maísculas para minúsculas.
+		mensagem = mensagem.toUpperCase() - converte as letras minúsculas para maísculas.
+		mensagem.charAt(0) - pega a posição 0 
+			ex: mensagem = "ola1410"
+				mensagem.charAt(0) - printa "o" 
+				mensagem.charAt(3) - printa "1"  
+				
+	Escrita e Leitura de Arquivos
+		PrintStream - variável que permite que você crie um arquivo .txt.
+			Já lança uma exceção que deve ser tratada.
+		hasNextLine() - ele verifica se tem outra linha e lê.
