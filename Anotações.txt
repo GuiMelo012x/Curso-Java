@@ -371,3 +371,87 @@ Métodos Estáticos
 	Um método estático não depende de uma instância da classe para ser utilizado, pode-se utilizar conforme:
 		NomeDaClasse.Metodo
 		System.out.println("A próxima conta será: " + Conta.proximaConta()); --> Método estático, não depende de uma instância.
+		
+Try Catch
+	Utilizamos o Try para tentar realizar algo, que geralmente pode acarretar em algum problema.
+	Utilizamos o Catch para capturar o erro e com isso oferecer ao usuário uma mensagem adequada sem que o sistema quebre.
+	Para implementar a exceção, deve-se ver o erro que deu no console primeiro, e depois criar um try-catch de acordo com o que deu no console.
+		Exemplo 1: Array fora do limite, tentando acessar o [6] se só tem até o [4]
+			try { (Tentar: )
+					System.out.println(numeros[6]); --> não pode.
+				} catch (ArrayIndexOutOfBoundsException e){ --> Caso não consiga, ao invés de imprimir o erro, vai imprimir:
+					System.out.println("Você está tentando acessar uma posição do array que não existe.");
+				}
+	Sintaxe:
+		catch (NomeDaException e){
+		catch (ArrayIndexOutOfBoundsException e){
+	
+	Exemplo 2: Divisão por 0. 
+	Exemplo 3: Escrevendo uma String quando o scanner pede um número int.
+		try{
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        System.out.println("A divisão é: " + (num1/num2));
+        
+		}catch (ArithmeticException e){ 
+            System.out.println("Não é possível dividir por zero.");
+
+        }catch (InputMismatchException x){
+            System.out.println("Número inválido, uma letra foi digitada.");
+		}
+		
+	O bloco "try" deve envolver todas as operações que podem dar exceção, neste caso, o try está em cima para pegar a parte do Scanner e da divisão.
+	A exception 2 pega nas linhas "int num = sc.nextInt()" e a exception 3 pega na linha do print que faz a divisão em "a divisão é: "
+	Finally
+		O finally sempre será executado, entrado no catch ou não.
+	
+
+	Também é possível capturar 2 exceções de tipos diferentes:
+		try{
+			int n1 = sc.nextInt();
+			int n2 = sc.nextInt();
+				System.out.println("O resultado da divisão é: " + divisao(n1,n2));
+				// Ela não deixa executar sem o tratamento de exceção, pois há a possibilidade de haver alguma. Ex: Divisão por 0.
+			}
+			catch (ArithmeticException e){
+				System.out.println("Não foi possível dividir os valores.");
+			}
+			catch (Exception e) { --> Se a exceção for do tipo Arithmetic, ele nem entra neste
+				System.out.println("Não foi possível dividir.");
+      
+	
+Tipos de Exception
+	Existem dois grupos de exceções:
+		Checked Exceptions
+		Unchecked Exceptions
+		
+	Checked Exceptions:
+		- Exception1 --> Classe pai, engloba todas as outras exceções.
+		- IOException  --> Trata erros envolvendo Input/Output.
+		- SQLException  --> Trata erros envolvendo bancos de dados/SQL.
+		São menos perigosas.
+		Fazem com que o programa não seja executado até que a exceção seja tratada.
+		
+	Unchecked Exceptions:
+		- RuntimeException --> Trata erros envolvendo tempos de execução.
+		- NullPointerException --> Não herda diretamente de Exception1, sendo filha de RuntimeException, ela trata erros de Runtime do tipo Nullpointer, ponteiros nulos.
+		- ArrayIndexOutOfBoundsException --> Também herda de runtime, e trata erros envolvendo Arrays fora do limite. 
+		São mais perigosas.
+		Só acontecem durante a execução do programa, então geralmentenão dá pra saber onde ela pode ocorrer.
+  
+Throws 
+	É possível criar uma função que pode lançar exceções:
+			public static int divisao (int n1, int n2) throws Exception{  --> 	Função que lança uma exceção do tipo Exception
+				return n1/n2;
+				
+		   Porém, quando chama, ela não permite executar caso a exceção não seja tratada.
+		   Para isso:
+		  
+			try{
+			int n1 = sc.nextInt();--> ativará caso digite uma letra
+			int n2 = sc.nextInt();
+				System.out.println("O resultado da divisão é: " + divisao(n1,n2)); --> ativará caso a divisão seja por 0.
+				// Ela não deixa executar sem o tratamento de exceção, pois há a possibilidade de haver alguma. 
+			}catch (Exception e) {
+				System.out.println("Não foi possível dividir.");
+			}
