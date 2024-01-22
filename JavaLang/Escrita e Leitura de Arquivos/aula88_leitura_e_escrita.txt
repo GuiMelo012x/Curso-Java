@@ -1,0 +1,9 @@
+Esta mensagem está sendo escrita manualmente num arquivo .txt - linha 1
+Boa tarde - linha 2
+Obrigado por acompanhar o curso! - linha 3
+Guilherme - linha 4
+Mensagem 1 
+Mensagem 2
+Mensagem 3
+Obrigado!
+Boa noite!
