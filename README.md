@@ -3,7 +3,7 @@ Curso de Java que estou fazendo na Udemy: Programação em Java do Básico ao Av
 
 Embora eu já saiba Java e a utilize há mais de 1 ano, acredito que preciso melhorar em algumas partes, e estou fazendo este curso para aperfeiçoar meu aprendizado. Além disso é a única linguagem de programação utilizada na minha faculdade. 
 
-Todo o conteúdo com as minhas anotações e explicações estarão no arquivo "Anotações.txt" que será atualizado conforme eu vou avançando no curso. Lá, é onde eu anoto as informações que podem me ajudar quando eu tiver dúvidas de um certo assunto.
+Todo o conteúdo teórico, com as minhas anotações e explicações estarão no arquivo "Anotações.txt" que será atualizado conforme eu vou avançando no curso. Lá, é onde eu anoto as informações que podem me ajudar quando eu tiver dúvidas de um certo assunto.
 
 Como ja possuo familiaridade neste assunto, meu foco será nas seções mais avançadas do curso.
 
