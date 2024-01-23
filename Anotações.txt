@@ -493,6 +493,7 @@ JavaLang:
 			verifica se um objeto é instância de uma Classe.
 				if (!(obj instanceof Conta)){
 					return false;
+					
 
 	Biblioteca Math
 		Possui vários métodos e constantes estáticas para serem utilizados nos programas.
@@ -525,3 +526,108 @@ JavaLang:
 		PrintStream - variável que permite que você crie um arquivo .txt.
 			Já lança uma exceção que deve ser tratada.
 		hasNextLine() - ele verifica se tem outra linha e lê.
+		
+Collections:
+
+Listas
+	Diferenças entre Listas e Arrays:
+		Arrays:
+			- Tem tamanho fixo. Se criarmos um array com 5 elementos, ele sempre terá 5 elementos.
+			- Tem tipo de dado fixo. Se criarmos um array de inteiros, ele terá apenas inteiros.
+			- Para encontrar um item no array, é necessário percorrer ele todo até encontrar.
+		Listas:
+			- Aceitam repetição de valores.
+			- Possuem tamanho "infinito", dependendo da memória.
+			- Aceitam valores de qualquer tipo, misturados na lista.
+	
+	Na lista, é sempre bom especificar o tipo de dado que será recebido, caso não vá misturar. Ex:
+		ArrayList <String> nomes = new ArrayList<String>(); --> desta forma, não será possível adicionar nada além de Strings.
+		
+	Sintaxe:
+		ArrayList<tipo> nome_lista = new ArrayList<tipo>();
+			ArrayList lista = new ArrayList<>(); --> inicializando sem tipo, aceitando vários tipos de variáveis.
+			ArrayList <String> nomes = new ArrayList<>(); 
+
+	ArrayList lista = new ArrayList<>(); --> Inicializando uma lista "lista"
+	lista.add("José "); --> adicionando elementos na lista.
+				lista.add(50); --> aceita todos os tipos, como int.
+				lista.add(true); --> boolean
+				lista.add(12.4); --> double
+				lista.add(4f); --> float
+	System.out.println(lista.get(0)); --> pegando os elementos nas posições.
+	for (int i = 0; i < lista.size(); i++) System.out.println(lista.get(i)); --> imprimir todos os elementos da lista.
+	
+	for (Object itens:lista){ --> caso a lista não tenha sido declarada um tipo específico
+		System.out.println(itens);
+	for (String nome:nomes){ --> caso tenha sido declarado um tipo específico na lista.
+		System.out.println(nome);
+
+	Collections.sort(nomes/numeros); --> para ordenar em ordem alfabética em Strings ou ordem crescente em Integer.
+	ArrayList <Cliente> clientes = new ArrayList<Cliente>(); 
+		Com o <Cliente>, ele só aceita adicionar objetos do tipo Cliente.
+			Cliente c1 = new Cliente("Alex Rios","Rua Tenente Júlio");
+			clientes.add(c1);
+			for (Cliente cliente: clientes){
+				System.out.println(cliente);
+			}
+		  Collections.sort(clientes); --> Como ele não sabe se deve ordenar por Nome ou Número, é necessário implementar a classe "Comparable" na classe Cliente.
+
+Conjuntos
+	São implementados com a Interface Set, e uma das classes que implementam esta interface é a HashSet.
+	A maioria das coleções possuem os mesmos métodos (como os da lista, tipo get,size,add).
+	Os comportamentos são diferentes. 
+	A performance dos conjuntos é melhor do que a das listas.
+	Não aceita repetições. Se tentar adicionar, ele simplesmente não adiciona, não executa.
+	Não aceita a ordenção de Collections.sort();
+	Não possui índice, ou seja, não tem como usar o conjunto.get(1);
+	A ordem de inserção não é respeitada, pois ele faz uma "semi-ordenação" automática
+	Para evitar itens que se repetem, é só usar Conjuntos.
+	
+	Sintaxe:
+		Set<tipo> nome_conjunto = new Hashset<tipo>();
+			Set<String> nomes = new HashSet<String>();
+		
+
+
+
+
+HashMap
+	Implementa a interface Map e trabalha com o conceito de chave/valor (keys e values do Python)
+	Não aceita chaves duplicadas, mas valores sim.
+	
+	Sintaxe:
+		Map<String, Conta> contas = new HashMap<String,Conta>();
+	
+	contas.put("Pessoa Física",c1) --> (key,value)
+	contas.put("Pessoa Jurídica",c2)
+	System.out.println(contas.get("Pessoa Física")) --> imprime c1
+	System.out.println(contas.get("Pessoa Jurídica")) --> imprime c2
+
+	
+
+Map
+	Os mapas são representados em java pela interface Map, que mapeia seus elementos utilizando o conceito de chave/valor.
+	São conhecidos como se representassem 3 coleções:
+		- Coleção de Chaves
+		- Coleção de Valores
+		- Coleção de Associações
+	
+	Sintaxe:
+		Map<Integer, String> pessoas = new HashMap<Integer,String>();
+	
+	pessoas.put(41,"Martin Scorsese") --> Adiciona um item, como, por exemplo, idade e nome.
+	pessoas.keySet().forEach(idade -> {
+	System.out.println(pessoas.get(idade)); --> imprime o item
+	});
+	pessoas.keySet()
+	pessoas.values()
+	pessoas.entrySet()
+
+
+
+
+
+Comandos Extras:
+	System.out.println(lista.get(x).getClass().getSimpleName()); --> para pegar o tipo da variável
+
+
