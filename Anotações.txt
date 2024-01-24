@@ -624,8 +624,34 @@ Map
 	pessoas.entrySet()
 
 
-
-
+Threads 
+	Quando dois ou mais programas precisam funcionar ao mesmo tempo.
+	Deve haver processamento em paralelo, por exemplo: 
+		Um programa que avisa, por meio de uma barra de progresso, que um relatório está carregando, e carrega este relatório ao mesmo tempo.
+		Se o programa rodar linha a linha, ele não consegue fazer estas duas coisas ao mesmo tempo.
+	Para executar os métodos em paralelos, é necessário que a Classe implemente a interface Runnable.
+	O método que irá ser executado em paralelo deve ser executado dentro do método que deve também ser implantado: "run"
+		public class BarraDeProgresso implements Runnable {
+		    public void run() {
+				for (int i = 0; i < 1000; i++) {
+					System.out.println("Barra de Progresso... aguarde");
+	
+	Por padrão, as threads não são sincronizadas. Pode ocorrer problemas de uma thread acessar o valor de um objeto
+	que ainda nao foi atualizado, ou ela executar depois do valor estar impresso. Para corrigir:
+		t1.join() --> depois ir lá na classe que está dessincronizada e adicionar o synchronized
+		t2.join()
+		public void depositar(float valor){
+        synchronized (this) {
+            this.saldo = this.saldo + valor;
+        }
+	
+	O sincronismo ocorre pois durante a execução do método, a Thread executa um "lock", assim, uma thread só executa após a finalização da thread inicial.
+	
+	Sintaxe:
+		Thread t1 = new Thread(barra); --> barra = objeto a ser sincronizado
+        t1.start();
+	
+	
 
 Comandos Extras:
 	System.out.println(lista.get(x).getClass().getSimpleName()); --> para pegar o tipo da variável
