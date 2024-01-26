@@ -652,8 +652,51 @@ Threads
         t1.start();
 	
 	
+Armazenamento Sequencial
+	Quando o array adiciona automaticamente os indexes.
+		O primeiro elemento é o [0], depois o [1],[2],[3]...
+	Desta forma, temos que criar métodos para adicionar,remover e alocar os espaços automaticamente.
+		Se alguem é adicionado na posição 3, a pessoa q estava na posição 3 vai pra 4.
+		Se alguém é removido na posição 2, a pessoa q estava na posição 3 vai pra 3. 
+		Para que assim, não fique nenhum espaço vazio.
+
+
+
+Listas Ligadas
+	Em um vetor, os elementos estão um do lado do outro.
+	Em uma lista, eles estão em lugares diferentes, porém um aponta para o outro, indicando o próximo elemento.
+	
+
+
+Pilhas
+	São estruturas de dados onde o elemento que está visível/disponível é o que está sempre no topo.
+	O primeiro elemento a entrar, é o último a sair (FILO).
+		First In, Last Out
+	Os elementos, ao serem adicionados em uma pilha, são adicionados sempre no topo.
+	Para remover elementos da pilha, só podemos remover o topo.
+	Toda ação que fazemos no computador fica armazenada numa pilha. Se dermos ctrl Z, ele desfaz apenas a última ação, em ordem.	
+	O próprio java já possui sua implementação de Pilha	:
+		Stack<String> pilha = new Stack<>() - inicializando
+		pilha.push() - adiciona no topo.
+		pilha.pop() - remove do topo.
+		pilha.peek() - vê qual o elemento que está no topo.
+		pilha.empty() - retorna true ou false se a pilha estiver vazia ou não.
+
+Fila
+	Diferentemente da pilha, todo elemento entra no final da filha.
+	O primeiro elemento a entrar, é o primeiro a sair (FIFO).
+		First In, First Out.
+	Todo elemento que entra na fila, vai para o final. Todo elemento entra no final.
+	O java também possui uma implementação de Fila:
+		Queue <String> fila = new LinkedList<String>();
+		fila.add() - adiciona no final.
+		fila.remove() - remove o primeiro.
+		fila.peek() - verifica quem está em primeiro.
+	
+
 
 Comandos Extras:
 	System.out.println(lista.get(x).getClass().getSimpleName()); --> para pegar o tipo da variável
-
-
+	StringBuilder builder = new StringBuilder("[")
+	builder.append(x)
+	
