@@ -1,4 +1,4 @@
-# Curso-Java - 108 aulas de 146 concluído
+# Curso-Java - 119 aulas de 146 concluído
 Curso de Java que estou fazendo na Udemy: Programação em Java do Básico ao Avançado da Geek University.
 
 Embora eu já saiba Java e a utilize há mais de 1 ano, acredito que preciso melhorar em algumas partes, e estou fazendo este curso para aperfeiçoar meu aprendizado. Além disso é a única linguagem de programação utilizada na minha faculdade. 
