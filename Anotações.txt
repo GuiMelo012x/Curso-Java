@@ -695,8 +695,35 @@ Fila
 	
 
 
+
+Default Methods
+	São métodos concretos implementados em sua interface. Eles já possuem implementação, ou seja, não precisam ser implementados.
+
+
+Classes Anônimas
+	São classes sem nome. Por exemplo:
+		Consumer <String> consumidor = new Consumer <String>{
+		}
+		Consumer é uma classe anônima.
+	Geralmente utilizado quando temos interfaces com um ou poucos métodos e não precisamos reaproveitar o código da classe.
+	Se não vamos precisar reaproveitar a classe em nenhum outro lugar do sistema, e esta classe que eu deveria criar apenas implementar uma interface com um ou poucos métodos,
+	eu posso utilizar a classe anônima.
+	
+
+Lambdas
+	São funções anônimas.
+	Ex: Forma 1
+			palavras.forEach((String s) -> {
+			System.out.println(s);
+			});
+				
+		Forma 2
+			palavras.forEach(s -> System.out.println(s));
+
+
 Comandos Extras:
 	System.out.println(lista.get(x).getClass().getSimpleName()); --> para pegar o tipo da variável
 	StringBuilder builder = new StringBuilder("[")
 	builder.append(x)
 	
+
