@@ -7,6 +7,7 @@ Todo o conteúdo teórico, com as minhas anotações e explicações estarão no
 
 Como ja possuo familiaridade neste assunto, meu foco será nas seções mais avançadas do curso.
 
+Todos os projetos serão postados dentro e fora deste repositório, pois são mais importantes e possuem todo o conteúdo que vi e aprendi ao longo do curso.
 
 ------
 Java course i'm taking in Udemy: Java programming, from basic to advanced, from Geek University.
@@ -14,3 +15,5 @@ Java course i'm taking in Udemy: Java programming, from basic to advanced, from 
 Although i already know Java and have been using it for over a year, i believe that i can be better and improve in some areas. Besides, i am taking this course to be a better student, because Java is the only programming language we use at my university. 
 
 As i am already familiar with Java, my focus will be on the more advanced part of the course.
+
+All projects will be posted inside and outside this repository, as they are more important and has all the content i have seen and learned throughout this course.
