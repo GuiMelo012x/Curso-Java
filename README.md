@@ -9,6 +9,8 @@ Como ja possuo familiaridade neste assunto, meu foco será nas seções mais ava
 
 Todos os projetos serão postados dentro e fora deste repositório, pois são mais importantes e possuem todo o conteúdo que vi e aprendi ao longo do curso.
 
+Certificado: https://www.udemy.com/certificate/UC-ec3ef384-3663-4a70-bde0-7093b68fd433/
+
 ------
 Java course i'm taking in Udemy: Java programming, from basic to advanced, from Geek University.
 
@@ -17,3 +19,5 @@ Although i already know Java and have been using it for over a year, i believe t
 As i am already familiar with Java, my focus will be on the more advanced part of the course.
 
 All projects will be posted inside and outside this repository, as they are more important and has all the content i have seen and learned throughout this course.
+
+Certificate: https://www.udemy.com/certificate/UC-ec3ef384-3663-4a70-bde0-7093b68fd433/
